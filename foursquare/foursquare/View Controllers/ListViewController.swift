@@ -10,6 +10,10 @@ import UIKit
 
 class ListViewController: UIViewController {
 
+    @IBAction func backToSearchResults(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

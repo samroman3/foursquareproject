@@ -21,13 +21,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchLocation: UISearchBar!
 
     @IBAction func showListButton(_ sender: UIButton) {
-        let vc = ListViewController()
-        present(vc, animated: true)
+ 
     }
     
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+         return .lightContent
+    }
     
     override func viewDidLoad() {
+        setNeedsStatusBarAppearanceUpdate()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
