@@ -19,6 +19,7 @@
 		3AFC8E632370B361006C525E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E622370B361006C525E /* ListViewController.swift */; };
 		3AFC8E662370B617006C525E /* VenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E652370B617006C525E /* VenueCollectionViewCell.swift */; };
 		3AFC8E6A2370BBA2006C525E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E692370BBA2006C525E /* Secrets.swift */; };
+		3AFC8E6C2370BCDC006C525E /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E6B2370BCDC006C525E /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3AFC8E622370B361006C525E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3AFC8E652370B617006C525E /* VenueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		3AFC8E692370BBA2006C525E /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = ../Secrets.swift; sourceTree = "<group>"; };
+		3AFC8E6B2370BCDC006C525E /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				3AFC8E602370B34F006C525E /* BookmarksViewController.swift */,
 				3AFC8E622370B361006C525E /* ListViewController.swift */,
 				3AFC8E652370B617006C525E /* VenueCollectionViewCell.swift */,
+				3AFC8E6B2370BCDC006C525E /* Venue.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AFC8E612370B350006C525E /* BookmarksViewController.swift in Sources */,
+				3AFC8E6C2370BCDC006C525E /* Venue.swift in Sources */,
 				3AFC8E352370AF92006C525E /* MainViewController.swift in Sources */,
 				3AFC8E6A2370BBA2006C525E /* Secrets.swift in Sources */,
 				3AFC8E312370AF92006C525E /* AppDelegate.swift in Sources */,
