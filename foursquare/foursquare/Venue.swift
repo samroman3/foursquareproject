@@ -44,10 +44,10 @@ struct Venue: Codable {
         case hasPerk, venuePage
     }
     
-    static func getVenues(from jsonData: Data) -> [Venue]? {
+    static func getVenues(from jsonData: Data) -> Venues? {
         do {
             let data = try JSONDecoder().decode(Venues.self, from: jsonData)
-            return data.response?.venues
+            return data
         } catch {
             print("Decoding error: \(error)")
             return nil
