@@ -59,7 +59,6 @@
                                 <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
                                 <connections>
-                                    <action selector="showListButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRe-4I-f7Y"/>
                                     <segue destination="nWn-rt-pui" kind="showDetail" id="kpF-wE-jwq"/>
                                 </connections>
                             </button>

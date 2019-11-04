@@ -19,10 +19,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchVenue: UISearchBar!
     
     @IBOutlet weak var searchLocation: UISearchBar!
-
-    @IBAction func showListButton(_ sender: UIButton) {
- 
-    }
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
