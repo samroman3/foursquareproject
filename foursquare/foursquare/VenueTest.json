@@ -1,0 +1,1399 @@
+{
+"meta": {
+"code": 200,
+"requestId": "5dc082c6f1110b002bd1058e"
+},
+"response": {
+"venues": [
+{
+"id": "5b2932a0f5e9d70039787cf2",
+"name": "Los Tacos Al Pastor",
+"location": {
+"address": "141 Front St",
+"lat": 40.70243624175102,
+"lng": -73.98753900608666,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.70243624175102,
+"lng": -73.98753900608666
+}
+],
+"distance": 1086,
+"postalCode": "11201",
+"cc": "US",
+"neighborhood": "DUMBO",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"141 Front St",
+"New York, NY 11201",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "857049",
+"url": "https://www.seamless.com/menu/los-tacos-al-pastor-141a-front-st-brooklyn/857049?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=857049",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "542f62bc498ee31baa1395cb",
+"name": "Rocco's Tacos and Tequila Bar Brooklyn",
+"location": {
+"address": "339 Adams St",
+"lat": 40.693277341475834,
+"lng": -73.98868115958473,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.693277341475834,
+"lng": -73.98868115958473
+}
+],
+"distance": 1213,
+"postalCode": "11201",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"339 Adams St",
+"Brooklyn, NY 11201",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "305535",
+"url": "https://www.seamless.com/menu/roccos-tacos-339-adams-street-brooklyn/305535?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=305535",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5d5f24ec09484500079aee00",
+"name": "Los Tacos No. 1",
+"location": {
+"address": "136 Church St",
+"lat": 40.71417,
+"lng": -74.00866,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.71417,
+"lng": -74.00866
+}
+],
+"distance": 1738,
+"postalCode": "10007",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"136 Church St",
+"New York, NY 10007",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "55bec538498eb47f902f7f9a",
+"name": "Los Tacos Mcondo",
+"location": {
+"address": "502 Grand St",
+"crossStreet": "at Union Ave",
+"lat": 40.71098977020521,
+"lng": -73.95105372494183,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.71098977020521,
+"lng": -73.95105372494183
+}
+],
+"distance": 4307,
+"postalCode": "11211",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"502 Grand St (at Union Ave)",
+"Brooklyn, NY 11211",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "313344",
+"url": "https://www.seamless.com/menu/mcondo-los-tacos-502-grand-st-brooklyn/313344?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=313344",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5209469f11d2d4f85e5b7427",
+"name": "Tacos Cuautla Morelos",
+"location": {
+"address": "438 E 9th St",
+"crossStreet": "btwn 1st Ave and Ave A",
+"lat": 40.727463069903365,
+"lng": -73.98306930735022,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.727463069903365,
+"lng": -73.98306930735022
+}
+],
+"distance": 3374,
+"postalCode": "10009",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"438 E 9th St (btwn 1st Ave and Ave A)",
+"New York, NY 10009",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "791834",
+"url": "https://www.seamless.com/menu/tacos-cuautla-morelos-438-e-9th-st-new-york/791834?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=791834",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"venuePage": {
+"id": "81870754"
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4c9521df82b56dcbc5fbd5aa",
+"name": "Tacos El Bronco Restaurant",
+"location": {
+"address": "4324 4th Ave",
+"crossStreet": "at 44th St",
+"lat": 40.652097,
+"lng": -74.003069,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.652097,
+"lng": -74.003069
+}
+],
+"distance": 5338,
+"postalCode": "11232",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"4324 4th Ave (at 44th St)",
+"Brooklyn, NY 11232",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"venuePage": {
+"id": "64943184"
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "56bd24e4498e32b766ce277a",
+"name": "Tacos Times Square",
+"location": {
+"address": "134 E 27th St",
+"crossStreet": "Lexington Ave",
+"lat": 40.74197985407905,
+"lng": -73.9826481273866,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.74197985407905,
+"lng": -73.9826481273866
+}
+],
+"distance": 4897,
+"postalCode": "10016",
+"cc": "US",
+"neighborhood": "Rose Hill",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"134 E 27th St (Lexington Ave)",
+"New York, NY 10016",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "314594",
+"url": "https://www.seamless.com/menu/tacos-times-square-tacos-grand-central-134-e-27th-st-new-york/314594?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=314594",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4a32b199f964a520779a1fe3",
+"name": "Tacos Nuevo Mexico",
+"location": {
+"address": "489 5th Ave",
+"crossStreet": "btwn 11th and 12th St.",
+"lat": 40.6676314582223,
+"lng": -73.9875895894939,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.6676314582223,
+"lng": -73.9875895894939
+}
+],
+"distance": 3752,
+"postalCode": "11215",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"489 5th Ave (btwn 11th and 12th St.)",
+"Brooklyn, NY 11215",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "66792",
+"url": "https://www.seamless.com/menu/nuevo-mexico-restaurant-489-5th-ave-brooklyn/66792?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=66792",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "59580ce6db1d8148fee3d383",
+"name": "Los Tacos No. 1",
+"location": {
+"address": "229 W 43rd St",
+"crossStreet": "btwn 7th & 8th Ave",
+"lat": 40.75713361630251,
+"lng": -73.98753586979832,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.75713361630251,
+"lng": -73.98753586979832
+}
+],
+"distance": 6446,
+"postalCode": "10036",
+"cc": "US",
+"neighborhood": "Theater District",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"229 W 43rd St (btwn 7th & 8th Ave)",
+"New York, NY 10036",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4e3833dfd4c0dc7ad2ed9987",
+"name": "Tacos Y Quesadillas Mexico Cart",
+"location": {
+"address": "W 53rd St.",
+"crossStreet": "Broadway",
+"lat": 40.76331656027343,
+"lng": -73.9826257307884,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.76331656027343,
+"lng": -73.9826257307884
+}
+],
+"distance": 7199,
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"W 53rd St. (Broadway)",
+"New York, NY",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5a01bc908496ca58fd7d3389",
+"name": "King David Tacos",
+"location": {
+"address": "Wall Street",
+"crossStreet": "Water Street",
+"lat": 40.705136111157074,
+"lng": -74.00718379384018,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.705136111157074,
+"lng": -74.00718379384018
+}
+],
+"distance": 833,
+"postalCode": "10005",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Wall Street (Water Street)",
+"New York, NY 10005",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "53aefe43498ec970f3cf4aea",
+"name": "Country Boys Tacos",
+"location": {
+"address": "Brooklyn Flea Fort Greene",
+"lat": 40.699322354013994,
+"lng": -73.97475273514199,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.699322354013994,
+"lng": -73.97475273514199
+}
+],
+"distance": 2132,
+"cc": "US",
+"neighborhood": "Fort Greene",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Brooklyn Flea Fort Greene",
+"Brooklyn, NY",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "57f7d404cd10bc661478f274",
+"name": "El Super Tacos",
+"location": {
+"address": "Archway Under the Manhattan Bridge",
+"lat": 40.70308957748415,
+"lng": -73.98810998517972,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.70308957748415,
+"lng": -73.98810998517972
+}
+],
+"distance": 1060,
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Archway Under the Manhattan Bridge",
+"Brooklyn, NY",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5196b9ff498e8a6be4336a03",
+"name": "Los Tacos No.1",
+"location": {
+"address": "75 9th Ave",
+"lat": 40.74224400629671,
+"lng": -74.00596115738153,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.74224400629671,
+"lng": -74.00596115738153
+}
+],
+"distance": 4729,
+"postalCode": "10011",
+"cc": "US",
+"neighborhood": "Chelsea",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"75 9th Ave",
+"New York, NY 10011",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"venuePage": {
+"id": "58414469"
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4a70d71cf964a52093d81fe3",
+"name": "Tacos El Idolo",
+"location": {
+"address": "250 W 14th St",
+"crossStreet": "8th Ave",
+"lat": 40.74082578839575,
+"lng": -74.00489365788579,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.74082578839575,
+"lng": -74.00489365788579
+}
+],
+"distance": 4563,
+"postalCode": "10011",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"250 W 14th St (8th Ave)",
+"New York, NY 10011",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5d5b477d88ba35000852447c",
+"name": "Tacos Vs Burritos",
+"location": {
+"address": "Jhon St",
+"crossStreet": "South St",
+"lat": 40.70592,
+"lng": -74.003765,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.70592,
+"lng": -74.003765
+}
+],
+"distance": 731,
+"postalCode": "10038",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Jhon St (South St)",
+"New York, NY 10038",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4a87839bf964a520940420e3",
+"name": "Tacos El Bronco",
+"location": {
+"address": "37th St",
+"crossStreet": "5th Ave",
+"lat": 40.65194675882707,
+"lng": -74.00322948833198,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.65194675882707,
+"lng": -74.00322948833198
+}
+],
+"distance": 5356,
+"postalCode": "11232",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"37th St (5th Ave)",
+"Brooklyn, NY 11232",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "57f7e1b2498ecadc38d0dff6",
+"name": "Tacos Cholula",
+"location": {
+"lat": 40.704753614725796,
+"lng": -74.00981148124384,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.704753614725796,
+"lng": -74.00981148124384
+}
+],
+"distance": 982,
+"postalCode": "10005",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"New York, NY 10005",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "594cc219135b395f126c8b5a",
+"name": "Tacos Cholula",
+"location": {
+"lat": 40.72142,
+"lng": -73.958257,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.72142,
+"lng": -73.958257
+}
+],
+"distance": 4253,
+"postalCode": "11249",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Brooklyn, NY 11249",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5b1062a4f193c0002c68c8c2",
+"name": "Otto’s Tacos",
+"location": {
+"lat": 40.78008009990453,
+"lng": -73.9531164547203,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.78008009990453,
+"lng": -73.9531164547203
+}
+],
+"distance": 9752,
+"postalCode": "10128",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"New York, NY 10128",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4ad2c7d1f964a520aee220e3",
+"name": "Tacos El Idolo (Un golazo de sabor)",
+"location": {
+"address": "6th Ave",
+"crossStreet": "Washington Pl",
+"lat": 40.73192864190217,
+"lng": -74.00073320687319,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.73192864190217,
+"lng": -74.00073320687319
+}
+],
+"distance": 3554,
+"postalCode": "10003",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"6th Ave (Washington Pl)",
+"New York, NY 10003",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5722c5ad498e3ca50d923596",
+"name": "Tacos Morelos",
+"location": {
+"crossStreet": "W 14th St (at 8th Ave)",
+"lat": 40.69719329074613,
+"lng": -73.98877355904663,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.69719329074613,
+"lng": -73.98877355904663
+}
+],
+"distance": 997,
+"cc": "US",
+"neighborhood": "Chelsea",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"W 14th St (at 8th Ave)",
+"New York, NY",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4cdee53af8cdb1f7c7218e12",
+"name": "Choncho's Tacos @ Brooklyn Flea",
+"location": {
+"address": "176 Lafayette Ave",
+"crossStreet": "btw Clermont + Vanderbilt",
+"lat": 40.68725785696736,
+"lng": -73.96906491343213,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.68725785696736,
+"lng": -73.96906491343213
+}
+],
+"distance": 2971,
+"postalCode": "11238",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"176 Lafayette Ave (btw Clermont + Vanderbilt)",
+"Brooklyn, NY 11238",
+"United States"
+]
+},
+"categories": [
+{
+"id": "53e0feef498e5aac066fd8a9",
+"name": "Street Food Gathering",
+"pluralName": "Street Food Gatherings",
+"shortName": "Street Food Gathering",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4b5415ecf964a520d3b127e3",
+"name": "Ricos Tacos",
+"location": {
+"address": "505 51st St",
+"crossStreet": "at 5th Ave",
+"lat": 40.644426211291815,
+"lng": -74.01070548851418,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.644426211291815,
+"lng": -74.01070548851418
+}
+],
+"distance": 6252,
+"postalCode": "11220",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"505 51st St (at 5th Ave)",
+"Brooklyn, NY 11220",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4c913f3a7f3b8cfae8149b1e",
+"name": "Tacos y Quesadilla Mexico",
+"location": {
+"address": "58th St",
+"crossStreet": "9th Ave",
+"lat": 40.76928462389037,
+"lng": -73.9845209325927,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.76928462389037,
+"lng": -73.9845209325927
+}
+],
+"distance": 7822,
+"postalCode": "10009",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"58th St (9th Ave)",
+"New York, NY 10009",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4adfa2e7f964a520607c21e3",
+"name": "Tacos Mexico Restaurant",
+"location": {
+"address": "3208 38th St",
+"crossStreet": "at Broadway",
+"lat": 40.759167205333824,
+"lng": -73.91996823712199,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.759167205333824,
+"lng": -73.91996823712199
+}
+],
+"distance": 9431,
+"postalCode": "11103",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"3208 38th St (at Broadway)",
+"New York, NY 11103",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"delivery": {
+"id": "71449",
+"url": "https://www.seamless.com/menu/tacos-mexico-3208-38th-st-astoria/71449?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=71449",
+"provider": {
+"name": "seamless",
+"icon": {
+"prefix": "https://fastly.4sqi.net/img/general/cap/",
+"sizes": [
+40,
+50
+],
+"name": "/delivery_provider_seamless_20180129.png"
+}
+}
+},
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4c28062c97d00f47a2583fea",
+"name": "Paco's Taco's",
+"location": {
+"address": "161 Maiden Ln",
+"lat": 40.707994,
+"lng": -74.006265,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.707994,
+"lng": -74.006265
+}
+],
+"distance": 1035,
+"postalCode": "10038",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"161 Maiden Ln",
+"New York, NY 10038",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1c1941735",
+"name": "Mexican Restaurant",
+"pluralName": "Mexican Restaurants",
+"shortName": "Mexican",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/mexican_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "5b214e161f08230043546df3",
+"name": "Tacos Al Pastor",
+"location": {
+"address": "141A Front St",
+"crossStreet": "Pearl St",
+"lat": 40.703218,
+"lng": -73.987495,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.703218,
+"lng": -73.987495
+}
+],
+"distance": 1114,
+"postalCode": "11201",
+"cc": "US",
+"city": "Brooklyn",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"141A Front St (Pearl St)",
+"Brooklyn, NY 11201",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d151941735",
+"name": "Taco Place",
+"pluralName": "Taco Places",
+"shortName": "Tacos",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/taco_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4bb9589db35776b0ade2c901",
+"name": "Tacos y Quesadillas Mexico",
+"location": {
+"address": "Roosevelt Ave.",
+"crossStreet": "btwn 61st St. & 62nd St.",
+"lat": 40.74505817581329,
+"lng": -73.90194631433069,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.74505817581329,
+"lng": -73.90194631433069
+}
+],
+"distance": 9674,
+"postalCode": "11377",
+"cc": "US",
+"city": "Woodside",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"Roosevelt Ave. (btwn 61st St. & 62nd St.)",
+"Woodside, NY 11377",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+},
+{
+"id": "4b53a97cf964a520cfa627e3",
+"name": "Super Tacos Truck",
+"location": {
+"address": "W 96th St.",
+"crossStreet": "Broadway",
+"lat": 40.794676919046736,
+"lng": -73.97219868866215,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.794676919046736,
+"lng": -73.97219868866215
+}
+],
+"distance": 10796,
+"postalCode": "10025",
+"cc": "US",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"W 96th St. (Broadway)",
+"New York, NY 10025",
+"United States"
+]
+},
+"categories": [
+{
+"id": "4bf58dd8d48988d1cb941735",
+"name": "Food Truck",
+"pluralName": "Food Trucks",
+"shortName": "Food Truck",
+"icon": {
+"prefix": "https://ss3.4sqi.net/img/categories_v2/food/streetfood_",
+"suffix": ".png"
+},
+"primary": true
+}
+],
+"referralId": "v-1572897478",
+"hasPerk": false
+}
+]
+}
+}
