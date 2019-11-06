@@ -19,11 +19,18 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchVenue: UISearchBar!
     
     @IBOutlet weak var searchLocation: UISearchBar!
+
     
-    var currentLocation = CLLocation.init(latitude: 40.7, longitude: -74)
+    var currentLocation = CLLocationCoordinate2D() {
+           didSet {
+               self.mapView.userTrackingMode = .follow
+               self.venueCollectionView.reloadData()
+            
+           }
+       }
     
     var venues = [Venue]() {
-        didSet{
+        didSet {
             self.venueCollectionView.reloadData()
         }
     }
@@ -32,11 +39,7 @@ class MainViewController: UIViewController {
   
     let searchRadius: CLLocationDistance = 2000
        
-    var venueString: String? = nil {
-        didSet{
-            loadVenues(string: venueString ?? "coffee")
-        }
-    }
+    var venueString: String? = nil
     
     private func locationAuthorization(){
         let status = CLLocationManager.authorizationStatus()
@@ -56,15 +59,17 @@ class MainViewController: UIViewController {
         venueCollectionView.delegate = self
         venueCollectionView.dataSource = self
         searchVenue.delegate = self
+        searchLocation.delegate = self
         locationManager.delegate = self
         searchVenue.searchTextField.textColor = .white
         searchLocation.searchTextField.textColor = .white
+
         
     }
     
     
-    private func loadVenues(string: String){
-        FSAPIClient.shared.getVenuesFrom(lat: currentLocation.coordinate.latitude, long: currentLocation.coordinate.longitude, query: string) { (result) in
+    private func loadVenues(string: String, lat: Double, long: Double){
+        FSAPIClient.shared.getVenuesFrom(lat: lat, long: long, query: string) { (result) in
             switch result {
             case .success(let venueData):
                 self.venues = venueData.response?.venues ?? []
@@ -88,9 +93,7 @@ class MainViewController: UIViewController {
         setUpDelegates()
         locationAuthorization()
         mapView.userTrackingMode = .follow
-        loadVenues(string: "coffee")
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
@@ -109,31 +112,30 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     cell.venueLabel.text = currentVenue.name
     cell.layer.cornerRadius = 6
     var photoURL = ""
-    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
-        switch result {
-        case .success(let string):
-            guard let url = string else { return }
-            photoURL = url
-            print(photoURL)
-            ImageHelper.shared.fetchImage(urlString: url) { (result) in
-                             switch result {
-                             case .failure(let error):
-                                 print(error)
-                                 print(photoURL)
-                             case .success(let pic):
-                                 cell.cellImage.image = pic
-                             }
-                         }
-        case .failure(let error):
-            print(error)
-            print("its me")
-        }
-    }
+//    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+//        switch result {
+//        case .success(let string):
+//            guard let url = string else { return }
+//            photoURL = url
+//            print(photoURL)
+//            ImageHelper.shared.fetchImage(urlString: url) { (result) in
+//                             switch result {
+//                             case .failure(let error):
+//                                 print(error)
+//                                 print(photoURL)
+//                             case .success(let pic):
+//                                 cell.cellImage.image = pic
+//                             }
+//                         }
+//        case .failure(let error):
+//            print(error)
+//            print("its me")
+//        }
+//    }
     
     return cell
 }
 
-    //TODO: Implement imagehelper to grab image
   
     
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -142,19 +144,66 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
 }
 
 extension MainViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//      venueString = searchText
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        switch searchBar.tag {
+        case 0:
+            venueString = searchText
+        default:
+            break
+        }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        venueString = searchBar.text
+        switch searchBar.tag {
+        case 0:
+            guard searchBar.text != "" && searchBar.text != nil else { return }
+            self.loadVenues(string: self.venueString ?? "", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
+            
+        case 1:
+            let searchRequest = MKLocalSearch.Request()
+                   searchRequest.naturalLanguageQuery = searchLocation.text
+                   let activeSearch = MKLocalSearch(request: searchRequest)
+                   activeSearch.start { (response, error) in
+                       if response == nil {
+                           print("no response from MKLocalSearch")
+                       } else {
+                        print("getting here")
+                           //get data from search
+                        let lat = response?.boundingRegion.center.latitude
+                        let long = response?.boundingRegion.center.longitude
+                        let newAnnotation = MKPointAnnotation()
+                        newAnnotation.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+                        let coordinateRegion = MKCoordinateRegion.init(center: newAnnotation.coordinate, latitudinalMeters: self.searchRadius * 2.0, longitudinalMeters: self.searchRadius * 2.0)
+                            self.mapView.setRegion(coordinateRegion, animated: true)
+                                       
+                        self.loadVenues(string: self.venueString ?? "", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
+                    }
+            }
+            default:
+            print("tag not valid")
+            
+        }
+        
     }
 }
+    
 
 
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
            print("new locations \(locations)")
+        guard let latestLocation = locations.first else { return }
+        
+        currentLocation = latestLocation.coordinate
            
        }
        

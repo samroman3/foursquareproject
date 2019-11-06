@@ -20,12 +20,12 @@
                                 <rect key="frame" x="0.0" y="151" width="414" height="662"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <searchBar tag="1" contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" text="" placeholder="Search Venues..." translatesAutoresizingMaskIntoConstraints="NO" id="nd6-4h-cM8" userLabel="venueBar">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" text="" placeholder="Search Venues..." translatesAutoresizingMaskIntoConstraints="NO" id="nd6-4h-cM8" userLabel="venueBar">
                                 <rect key="frame" x="0.0" y="39" width="372" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <searchBar tag="2" contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search Location..." translatesAutoresizingMaskIntoConstraints="NO" id="VCu-R8-RHQ" userLabel="locationBar">
+                            <searchBar tag="1" contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search Location..." translatesAutoresizingMaskIntoConstraints="NO" id="VCu-R8-RHQ" userLabel="locationBar">
                                 <rect key="frame" x="0.0" y="95" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
