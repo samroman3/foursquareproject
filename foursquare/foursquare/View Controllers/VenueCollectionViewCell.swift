@@ -10,6 +10,9 @@ import UIKit
 
 class VenueCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var venueLabel: UILabel!
+    
+    @IBOutlet weak var cellImage: UIImageView!
     
     
     

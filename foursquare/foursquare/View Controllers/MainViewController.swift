@@ -22,13 +22,19 @@ class MainViewController: UIViewController {
     
     var currentLocation = CLLocation.init(latitude: 40.7, longitude: -74)
     
+    var venues = [Venue]() {
+        didSet{
+            self.venueCollectionView.reloadData()
+        }
+    }
+    
     private let locationManager = CLLocationManager()
   
     let searchRadius: CLLocationDistance = 2000
        
-    var searchString: String? = nil {
+    var venueString: String? = nil {
         didSet{
-            
+            loadVenues(string: venueString ?? "coffee")
         }
     }
     
@@ -46,6 +52,35 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func setUpDelegates(){
+        venueCollectionView.delegate = self
+        venueCollectionView.dataSource = self
+        searchVenue.delegate = self
+        locationManager.delegate = self
+        searchVenue.searchTextField.textColor = .white
+        searchLocation.searchTextField.textColor = .white
+        
+    }
+    
+    
+    private func loadVenues(string: String){
+        FSAPIClient.shared.getVenuesFrom(lat: currentLocation.coordinate.latitude, long: currentLocation.coordinate.longitude, query: string) { (result) in
+            switch result {
+            case .success(let venueData):
+                self.venues = venueData.response?.venues ?? []
+                self.venueCollectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getVenueID(){
+        
+    }
+    
+    
+    
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -56,23 +91,65 @@ class MainViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
         setUpDelegates()
         locationAuthorization()
-        locationManager.delegate = self
         mapView.userTrackingMode = .follow
+        loadVenues(string: "coffee")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    
-    private func setUpDelegates(){
-        searchVenue.delegate = self
-        searchLocation.delegate = self
-    }
+
 
 }
 
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return venues.count
+}
+
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "venueCell", for: indexPath) as! VenueCollectionViewCell
+    let currentVenue = venues[indexPath.row]
+    cell.venueLabel.text = currentVenue.name ?? ""
+    cell.layer.cornerRadius = 6
+    var photoURL = ""
+//    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ?? "" ) { (result) in
+//        switch result {
+//        case .success(let string):
+//            guard let url = string else { return }
+//            photoURL = url
+//            print(photoURL)
+//        case .failure(let error):
+//            print(error)
+//            print("its me")
+//        }
+//    }
+    
+    return cell
+}
+
+    //TODO: Implement imagehelper to grab image
+    /* ImageHelper.shared.fetchImage(urlString: url) { (result) in
+                   switch result {
+                   case .failure(let error):
+                       print(error)
+                       print(photoURL)
+                   case .success(let pic):
+                       cell.cellImage.image = pic
+                   }
+               }*/
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: 181, height: 170 )
+}
+}
+
 extension MainViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//      venueString = searchText
+//    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        venueString = searchBar.text
     }
 }
 
@@ -98,3 +175,4 @@ extension MainViewController: CLLocationManagerDelegate {
            }
        }
 }
+
