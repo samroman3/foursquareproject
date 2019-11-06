@@ -46,20 +46,20 @@ struct Item: Codable {
     let prefix: String
     let suffix: String
     let width, height: Int?
-    
-    let checkin: Checkin
-    let visibility: String?
+//
+//    let checkin: Checkin
+//    let visibility: String?
     
  
-    func returnPictureURL() -> String? {
+    func returnPictureURL() -> String {
        return "\(prefix)original\(suffix)"
     }
 }
-// MARK: - Checkin
-struct Checkin: Codable {
-    let id: String?
-    let createdAt: Int?
-    let type: String?
-    let timeZoneOffset: Int?
-}
+//// MARK: - Checkin
+//struct Checkin: Codable {
+//    let id: String?
+//    let createdAt: Int?
+//    let type: String?
+//    let timeZoneOffset: Int?
+//}
 

@@ -30,7 +30,7 @@ struct Response: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let id, name: String?
+    let id, name: String
     let location: Location?
     let categories: [Category]?
     let delivery: Delivery?
@@ -57,7 +57,7 @@ struct Venue: Codable {
 
 // MARK: - Category
 struct Category: Codable {
-    let id: String?
+    let id: String
     let name: String?
     let pluralName: String?
     let shortName: String?

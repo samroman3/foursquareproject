@@ -75,10 +75,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func getVenueID(){
-        
-    }
-    
     
     
     
@@ -110,34 +106,36 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "venueCell", for: indexPath) as! VenueCollectionViewCell
     let currentVenue = venues[indexPath.row]
-    cell.venueLabel.text = currentVenue.name ?? ""
+    cell.venueLabel.text = currentVenue.name
     cell.layer.cornerRadius = 6
     var photoURL = ""
-//    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ?? "" ) { (result) in
-//        switch result {
-//        case .success(let string):
-//            guard let url = string else { return }
-//            photoURL = url
-//            print(photoURL)
-//        case .failure(let error):
-//            print(error)
-//            print("its me")
-//        }
-//    }
+    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+        switch result {
+        case .success(let string):
+            guard let url = string else { return }
+            photoURL = url
+            print(photoURL)
+            ImageHelper.shared.fetchImage(urlString: url) { (result) in
+                             switch result {
+                             case .failure(let error):
+                                 print(error)
+                                 print(photoURL)
+                             case .success(let pic):
+                                 cell.cellImage.image = pic
+                             }
+                         }
+        case .failure(let error):
+            print(error)
+            print("its me")
+        }
+    }
     
     return cell
 }
 
     //TODO: Implement imagehelper to grab image
-    /* ImageHelper.shared.fetchImage(urlString: url) { (result) in
-                   switch result {
-                   case .failure(let error):
-                       print(error)
-                       print(photoURL)
-                   case .success(let pic):
-                       cell.cellImage.image = pic
-                   }
-               }*/
+  
+    
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 181, height: 170 )
 }
