@@ -23,17 +23,24 @@ class MainViewController: UIViewController {
     
     var currentLocation = CLLocationCoordinate2D() {
         didSet {
-            self.loadVenues(string: self.venueString ?? "", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
+            self.loadVenues(string: self.venueString ?? "Coffee", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
             self.venueCollectionView.reloadData()
             
         }
     }
     
-    var currentLat = 0.0
-    var currentLong = 0.0
-    
     var venues = [Venue]() {
         didSet {
+            let annotations = self.mapView.annotations
+            self.mapView.removeAnnotations(annotations)
+            for i in venues {
+               let newAnnotation = MKPointAnnotation()
+                newAnnotation.coordinate = CLLocationCoordinate2D(latitude: i.location?.lat ?? 0.0, longitude: i.location?.lng ?? 0.0)
+                newAnnotation.title = i.name
+                self.mapView.addAnnotation(newAnnotation)
+                
+            }
+            
             self.venueCollectionView.reloadData()
         }
     }
@@ -86,9 +93,7 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    
-    
+
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -119,26 +124,26 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.venueLabel.text = currentVenue.name
         cell.layer.cornerRadius = 6
         var photoURL = ""
-        //    FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
-        //        switch result {
-        //        case .success(let string):
-        //            guard let url = string else { return }
-        //            photoURL = url
-        //            print(photoURL)
-        //            ImageHelper.shared.fetchImage(urlString: url) { (result) in
-        //                             switch result {
-        //                             case .failure(let error):
-        //                                 print(error)
-        //                                 print(photoURL)
-        //                             case .success(let pic):
-        //                                 cell.cellImage.image = pic
-        //                             }
-        //                         }
-        //        case .failure(let error):
-        //            print(error)
-        //            print("its me")
-        //        }
-        //    }
+            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+                switch result {
+                case .success(let string):
+                    guard let url = string else { return }
+                    photoURL = url
+                    print(photoURL)
+                    ImageHelper.shared.fetchImage(urlString: url) { (result) in
+                                     switch result {
+                                     case .failure(let error):
+                                         print(error)
+                                         print(photoURL)
+                                     case .success(let pic):
+                                         cell.cellImage.image = pic
+                                     }
+                                 }
+                case .failure(let error):
+                    print(error)
+                    print("its me")
+                }
+            }
         
         return cell
     }
@@ -167,6 +172,7 @@ extension MainViewController: UISearchBarDelegate {
         case 0:
             guard searchBar.text != "" && searchBar.text != nil else { return }
             venueString = searchBar.text
+            
             
         case 1:
             let searchRequest = MKLocalSearch.Request()
