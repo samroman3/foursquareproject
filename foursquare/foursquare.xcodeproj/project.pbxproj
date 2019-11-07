@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A79949423722DFF002C5DD4 /* VenuePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A79949323722DFF002C5DD4 /* VenuePicture.swift */; };
 		3A9ED58A23749F5D00D64483 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ED58923749F5D00D64483 /* ListTableViewCell.swift */; };
+		3A9ED58C2374C5DE00D64483 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ED58B2374C5DE00D64483 /* DetailViewController.swift */; };
 		3AFC8E312370AF92006C525E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E302370AF92006C525E /* AppDelegate.swift */; };
 		3AFC8E332370AF92006C525E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E322370AF92006C525E /* SceneDelegate.swift */; };
 		3AFC8E352370AF92006C525E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC8E342370AF92006C525E /* MainViewController.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		3A79949323722DFF002C5DD4 /* VenuePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePicture.swift; sourceTree = "<group>"; };
 		3A9ED58923749F5D00D64483 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		3A9ED58B2374C5DE00D64483 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3AFC8E2D2370AF92006C525E /* foursquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foursquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFC8E302370AF92006C525E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFC8E322370AF92006C525E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFC8E342370AF92006C525E /* MainViewController.swift */,
+				3A9ED58B2374C5DE00D64483 /* DetailViewController.swift */,
 				3AFC8E602370B34F006C525E /* BookmarksViewController.swift */,
 				3AFC8E622370B361006C525E /* ListViewController.swift */,
 				3A9ED58923749F5D00D64483 /* ListTableViewCell.swift */,
@@ -339,6 +342,7 @@
 				3AFC8E312370AF92006C525E /* AppDelegate.swift in Sources */,
 				3AFC8E632370B361006C525E /* ListViewController.swift in Sources */,
 				3AFC8E662370B617006C525E /* VenueCollectionViewCell.swift in Sources */,
+				3A9ED58C2374C5DE00D64483 /* DetailViewController.swift in Sources */,
 				3AFC8E332370AF92006C525E /* SceneDelegate.swift in Sources */,
 				3AFC8E732370C313006C525E /* ImageHelper.swift in Sources */,
 			);

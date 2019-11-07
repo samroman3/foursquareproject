@@ -116,6 +116,7 @@ class MainViewController: UIViewController {
         setUpDelegates()
         locationAuthorization()
         mapView.userTrackingMode = .follow
+        mapView.delegate = self
         super.viewDidLoad()
     }
     
@@ -134,30 +135,30 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let currentVenue = venues[indexPath.row]
         cell.venueLabel.text = currentVenue.name
         cell.layer.cornerRadius = 6
-            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
-                switch result {
-                case .success(let items):
-                    if items.isEmpty {
-                    cell.cellImage.image = UIImage(named: "yellow_placeholder")
-                    } else {
-                    let url = items[0].returnPictureURL()
-                        print(url!)
-                        ImageHelper.shared.fetchImage(urlString: url!) { (result) in
-                                     switch result {
-                                     case .failure(let error):
-                                         print(error)
-                                         print(url!)
-                                     case .success(let pic):
-                                         cell.cellImage.image = pic
-                                     }
-                                 }
-                    }
-                case .failure(let error):
-                    print(error)
-                    print("its me")
-                }
-                
-        }
+//            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+//                switch result {
+//                case .success(let items):
+//                    if items.isEmpty {
+//                    cell.cellImage.image = UIImage(named: "yellow_placeholder")
+//                    } else {
+//                    let url = items[0].returnPictureURL()
+//                        print(url!)
+//                        ImageHelper.shared.fetchImage(urlString: url!) { (result) in
+//                                     switch result {
+//                                     case .failure(let error):
+//                                         print(error)
+//                                         print(url!)
+//                                     case .success(let pic):
+//                                         cell.cellImage.image = pic
+//                                     }
+//                                 }
+//                    }
+//                case .failure(let error):
+//                    print(error)
+//                    print("its me")
+//                }
+//
+//        }
         return cell
     }
     
@@ -165,6 +166,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 181, height: 170 )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //move map to view the selected venues annotation
+        let item = venues[indexPath.row]
+        let newAnnotation = MKPointAnnotation()
+        newAnnotation.coordinate = CLLocationCoordinate2D(latitude: (item.location?.lat)!, longitude: (item.location?.lng)!)
+        let coordinateRegion = MKCoordinateRegion.init(center: newAnnotation.coordinate, latitudinalMeters: self.searchRadius, longitudinalMeters: self.searchRadius)
+        self.mapView.setRegion(coordinateRegion, animated: true)
     }
 }
 
@@ -219,6 +229,9 @@ extension MainViewController: UISearchBarDelegate {
 
 
 extension MainViewController: CLLocationManagerDelegate {
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("new locations \(locations)")
     }
@@ -239,4 +252,31 @@ extension MainViewController: CLLocationManagerDelegate {
     }
 }
 
+extension MainViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+      //after mapview moves to annotation create function to segue to detail view based on index of annotation and venue
+        var selectedVenue: Venue? {
+            didSet {
+                let detailVC = storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
+                detailVC.venue = selectedVenue
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }
+        
+        for i in venues {
+            if i.name == view.annotation?.title {
+                print(i.name)
+                selectedVenue = i
+            }
+        }
+        
+        
+        
+        
+    }
+    
 
+    
+    
+}
