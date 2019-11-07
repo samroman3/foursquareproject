@@ -13,7 +13,7 @@ struct FSAPIClient {
     static let shared = FSAPIClient()
     
     func getVenuesFrom(lat: Double, long: Double, query: String, completionHandler: @escaping (Result<Venues, AppError>) -> ()) {
-        let urlStr = "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=\(Secrets.clientKey)&client_secret=\(Secrets.secretsKey)&query=\(query)&v=20191104"
+        let urlStr = "https://api.foursquare.com/v2/venues/search?ll=\(lat),\(long)&client_id=\(Secrets.clientKey)&client_secret=\(Secrets.secretsKey)&query=\(query)&v=20191104"
         
         guard let url = URL(string: urlStr) else {
             completionHandler(.failure(AppError.badURL))
