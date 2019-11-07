@@ -21,9 +21,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchLocation: UISearchBar!
     
     
-    var currentLocation = CLLocationCoordinate2D() {
+    var currentLocation = CLLocationCoordinate2D.init(latitude: 40.6782, longitude: -73.9442) {
         didSet {
-            self.loadVenues(string: self.venueString ?? "Coffee", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
+            self.loadVenues(string: self.venueString ?? "", lat: self.currentLocation.latitude, long: self.currentLocation.latitude)
             self.venueCollectionView.reloadData()
             
         }
@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
             self.mapView.removeAnnotations(annotations)
             for i in venues {
                let newAnnotation = MKPointAnnotation()
-                newAnnotation.coordinate = CLLocationCoordinate2D(latitude: i.location?.lat ?? 0.0, longitude: i.location?.lng ?? 0.0)
+                newAnnotation.coordinate = CLLocationCoordinate2D(latitude: i.location?.lat ?? 40.6782, longitude: i.location?.lng ?? -73.9442)
                 newAnnotation.title = i.name
                 self.mapView.addAnnotation(newAnnotation)
                 
@@ -124,26 +124,26 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.venueLabel.text = currentVenue.name
         cell.layer.cornerRadius = 6
         var photoURL = ""
-            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
-                switch result {
-                case .success(let string):
-                    guard let url = string else { return }
-                    photoURL = url
-                    print(photoURL)
-                    ImageHelper.shared.fetchImage(urlString: url) { (result) in
-                                     switch result {
-                                     case .failure(let error):
-                                         print(error)
-                                         print(photoURL)
-                                     case .success(let pic):
-                                         cell.cellImage.image = pic
-                                     }
-                                 }
-                case .failure(let error):
-                    print(error)
-                    print("its me")
-                }
-            }
+//            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+//                switch result {
+//                case .success(let string):
+//                    guard let url = string else { return }
+//                    photoURL = url
+//                    print(photoURL)
+//                    ImageHelper.shared.fetchImage(urlString: url) { (result) in
+//                                     switch result {
+//                                     case .failure(let error):
+//                                         print(error)
+//                                         print(photoURL)
+//                                     case .success(let pic):
+//                                         cell.cellImage.image = pic
+//                                     }
+//                                 }
+//                case .failure(let error):
+//                    print(error)
+//                    print("its me")
+//                }
+//            }
         
         return cell
     }
@@ -190,7 +190,7 @@ extension MainViewController: UISearchBarDelegate {
                     newAnnotation.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
                     let coordinateRegion = MKCoordinateRegion.init(center: newAnnotation.coordinate, latitudinalMeters: self.searchRadius * 2.0, longitudinalMeters: self.searchRadius * 2.0)
                     self.mapView.setRegion(coordinateRegion, animated: true)
-                    self.currentLocation = .init(latitude: lat ?? 0.0, longitude: long ?? 0.0)
+                    self.currentLocation = .init(latitude: lat ?? 40.6782, longitude: long ?? -73.9442)
                 }
             }
         default:
@@ -208,10 +208,6 @@ extension MainViewController: UISearchBarDelegate {
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("new locations \(locations)")
-//        guard let latestLocation = locations.first else { return }
-//
-//        currentLocation = latestLocation.coordinate
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

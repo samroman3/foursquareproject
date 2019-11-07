@@ -23,6 +23,7 @@ struct FSAPIClient {
             switch result {
             case .failure(let error):
                 completionHandler(.failure(.other(rawError: error)))
+                print(urlStr)
             case .success(let data):
                     let venues = Venue.getVenues(from: data)
                     completionHandler(.success(venues!))

@@ -51,7 +51,7 @@ struct Item: Codable {
 //    let visibility: String?
     
  
-    func returnPictureURL() -> String {
+    func returnPictureURL() -> String? {
        return "\(prefix)original\(suffix)"
     }
 }
