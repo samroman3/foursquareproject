@@ -31,7 +31,7 @@ struct FSAPIClient {
         }
     }
     
-    func getPictureURL(venueID: String, completionHandler: @escaping (Result<String?, AppError>) -> ()) {
+    func getPictureURL(venueID: String, completionHandler: @escaping (Result<[Item], AppError>) -> ()) {
         let urlStr = "https://api.foursquare.com/v2/venues/\(venueID)/photos?client_id=\(Secrets.clientKey)&client_secret=\(Secrets.secretsKey)&v=20191104&limit=1"
         
         guard let url = URL(string: urlStr) else {
@@ -44,8 +44,8 @@ struct FSAPIClient {
                 completionHandler(.failure(.other(rawError: error)))
             case .success(let data):
                 let photoURL = PictureWrapper.getPhoto(from: data)
-                completionHandler(.success(photoURL[0].returnPictureURL()))
-            }
+         completionHandler(.success(photoURL))
+                }
         }
     }
     

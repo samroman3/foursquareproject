@@ -10,8 +10,12 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var listImage: UIImageView!
     
     
+    @IBOutlet weak var listLabel: UILabel!
+    
+    @IBOutlet weak var listAddress: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
