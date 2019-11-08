@@ -14,17 +14,18 @@ struct BookmarkPersistenceHelper {
 
     static let manager = BookmarkPersistenceHelper()
     
-    func saveBookmark(newItem: Bookmark) throws {
-        try persistenceHelper.save(newElement: newItem)
+    func saveBookmark(newArray: [Bookmark]) throws {
+        try persistenceHelper.save(updatedElements: newArray)
     }
+    
     func getBookmarks() throws -> [Bookmark] {
         return try persistenceHelper.getObjects()
     }
 
-    func delete(index: Int) throws {
+    func deleteBookmark(index: Int) throws {
         return try persistenceHelper.deleteAtIndex(index: index)
-
 }
+    
 
     private let persistenceHelper = PersistenceHelper<Bookmark>(fileName: "venueBookmarks.plist")
     private init() {}

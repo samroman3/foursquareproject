@@ -13,7 +13,7 @@ class BookmarksViewController: UIViewController {
     
     var bookmarks = [Bookmark](){
         didSet{
-            
+            bookmarkCV.reloadData()
         }
     }
     
@@ -22,10 +22,27 @@ class BookmarksViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        bookmarkCV.delegate = self
+        bookmarkCV.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
 
+}
+
+extension BookmarksViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return bookmarks.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookMarkCell", for: indexPath)
+        
+        return cell
+    }
+    
+    
 }

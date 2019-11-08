@@ -79,8 +79,6 @@ class MainViewController: UIViewController {
         locationManager.delegate = self
         searchVenue.searchTextField.textColor = .white
         searchLocation.searchTextField.textColor = .white
-        
-        
     }
     
     
