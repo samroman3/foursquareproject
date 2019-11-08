@@ -14,10 +14,7 @@ class ListViewController: UIViewController {
     
     
     
-    var items = [Venue]() {
-        didSet{
-        }
-    }
+    var items = [Venue]()
     
     @IBAction func backToSearchResults(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -57,6 +54,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 187
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let venue = items[indexPath.row]
+        let detailVC = storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
+        detailVC.venue = venue
+        present(detailVC,animated: true)
     }
     
 }

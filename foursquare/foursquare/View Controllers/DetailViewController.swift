@@ -18,6 +18,13 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailAddress: UILabel!
     
+    @IBAction func backToSearchButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         detailName.text = venue?.name ?? ""
         detailAddress.text = venue?.location?.address ?? ""
