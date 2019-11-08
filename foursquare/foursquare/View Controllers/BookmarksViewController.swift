@@ -9,7 +9,18 @@
 import UIKit
 
 class BookmarksViewController: UIViewController {
+    
+    
+    var bookmarks = [Bookmark](){
+        didSet{
+            
+        }
+    }
+    
 
+    @IBOutlet weak var bookmarkCV: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

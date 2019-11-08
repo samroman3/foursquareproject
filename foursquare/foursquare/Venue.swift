@@ -37,7 +37,9 @@ struct Venue: Codable {
     let referralID: String?
     let hasPerk: Bool?
     let venuePage: VenuePage?
-
+    
+    var imageForBookmark: Data?
+    
     enum CodingKeys: String, CodingKey {
         case id, name, location, categories, delivery
         case referralID = "referralId"
