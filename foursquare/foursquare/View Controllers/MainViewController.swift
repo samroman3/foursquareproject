@@ -255,7 +255,7 @@ extension MainViewController: CLLocationManagerDelegate {
 extension MainViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-      //after mapview moves to annotation create function to segue to detail view based on index of annotation and venue
+        //app currently segues to all detail views with same name, find way to filter by tag?
         var selectedVenue: Venue? {
             didSet {
                 let detailVC = storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
@@ -265,7 +265,7 @@ extension MainViewController: MKMapViewDelegate {
         }
         
         for i in venues {
-            if i.name == view.annotation?.title {
+            if i.location?.lat == view.annotation?.coordinate.latitude && i.location?.lng == view.annotation?.coordinate.longitude {
                 print(i.name)
                 selectedVenue = i
             }
