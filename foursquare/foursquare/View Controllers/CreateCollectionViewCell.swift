@@ -1,5 +1,5 @@
 //
-//  Bookmark.swift
+//  CreateCollectionViewCell.swift
 //  foursquare
 //
 //  Created by Sam Roman on 11/8/19.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-struct Bookmark: Codable {
-    var image: Data?
-    var name: String
+class CreateCollectionViewCell: UICollectionViewCell {
     
-    var venues: [Venue]?
+    
 }

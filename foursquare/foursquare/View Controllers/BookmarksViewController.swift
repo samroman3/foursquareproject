@@ -21,12 +21,25 @@ class BookmarksViewController: UIViewController {
     @IBOutlet weak var bookmarkCV: UICollectionView!
     
     
+    
+    private func loadBookmarks(){
+        do {
+            bookmarks = try BookmarkPersistenceHelper.manager.getBookmarks()
+        }
+        catch {
+            return
+        }
+    }
     override func viewDidLoad() {
         bookmarkCV.delegate = self
         bookmarkCV.dataSource = self
+        loadBookmarks()
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadBookmarks()
     }
 
 
@@ -39,8 +52,9 @@ extension BookmarksViewController: UICollectionViewDelegate, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookMarkCell", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookmarkCell", for: indexPath) as! BookmarkCollectionViewCell
+        cell.layer.cornerRadius = 10
+        cell.collectionName.text = bookmarks[indexPath.row].name
         return cell
     }
     

@@ -132,7 +132,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "venueCell", for: indexPath) as! VenueCollectionViewCell
         let currentVenue = venues[indexPath.row]
         cell.venueLabel.text = currentVenue.name
-        cell.layer.cornerRadius = 6
+        cell.layer.cornerRadius = 10
 //            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
 //                switch result {
 //                case .success(let items):
