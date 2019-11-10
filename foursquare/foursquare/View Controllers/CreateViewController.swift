@@ -24,11 +24,18 @@ class CreateViewController: UIViewController {
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        guard createTextField.text != "" && selectedVenue != nil else { return }
-        createNewBookMark()
+    
+        
         
     }
     
+    @IBAction func createButtonPressed(_ sender: UIButton) {
+        guard createTextField.text != "" && selectedVenue != nil else { return }
+        
+        createNewBookMark()
+        dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
+    }
     
     private func createNewBookMark(){
         do {
@@ -42,11 +49,21 @@ class CreateViewController: UIViewController {
         }
     }
     
+    private func loadBookmarks(){
+        do {
+            let bm = try BookmarkPersistenceHelper.manager.getBookmarks()
+            bookmarks = bm
+        } catch {
+            return
+        }
+    }
+    
     
     
     override func viewDidLoad() {
         createCV.delegate = self
         createCV.dataSource = self
+        loadBookmarks()
         super.viewDidLoad()
     }
 
@@ -62,10 +79,26 @@ extension CreateViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = createCV.dequeueReusableCell(withReuseIdentifier: "createCell", for: indexPath)
+        let cell = createCV.dequeueReusableCell(withReuseIdentifier: "createCell", for: indexPath) as! CreateCollectionViewCell
+        let bookmark = bookmarks[indexPath.row]
         cell.layer.cornerRadius = 10
+        cell.collectionName.text = bookmark.name
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 184, height: 185)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        bookmarks[indexPath.row].venues!.append(selectedVenue!)
+        do {
+            try BookmarkPersistenceHelper.manager.saveBookmark(newArray: bookmarks)
+            self.dismiss(animated: true, completion: nil)
+            navigationController?.popToRootViewController(animated: true)
+        } catch {
+            return
+        }
+        
+    }
 }

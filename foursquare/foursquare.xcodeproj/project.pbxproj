@@ -131,6 +131,17 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		3A9ED5DE23787B3200D64483 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A9ED5D32376164900D64483 /* Bookmark.swift */,
+				3AFC8E6B2370BCDC006C525E /* Venue.swift */,
+				3A79949323722DFF002C5DD4 /* VenuePicture.swift */,
+				3AFC8E742370C5A6006C525E /* VenueTest.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3AFC8E242370AF92006C525E = {
 			isa = PBXGroup;
 			children = (
@@ -158,14 +169,11 @@
 				3AFC8E692370BBA2006C525E /* Secrets.swift */,
 				3AFC8E6F2370C291006C525E /* Network */,
 				3A9ED5D7237618F200D64483 /* Persistence */,
+				3A9ED5DE23787B3200D64483 /* Models */,
+				3AFC8E642370B36B006C525E /* View Controllers */,
 				3AFC8E302370AF92006C525E /* AppDelegate.swift */,
 				3AFC8E322370AF92006C525E /* SceneDelegate.swift */,
 				3AFC8E362370AF92006C525E /* Main.storyboard */,
-				3A9ED5D32376164900D64483 /* Bookmark.swift */,
-				3AFC8E6B2370BCDC006C525E /* Venue.swift */,
-				3A79949323722DFF002C5DD4 /* VenuePicture.swift */,
-				3AFC8E742370C5A6006C525E /* VenueTest.json */,
-				3AFC8E642370B36B006C525E /* View Controllers */,
 				3AFC8E392370AF93006C525E /* Assets.xcassets */,
 				3AFC8E3B2370AF93006C525E /* LaunchScreen.storyboard */,
 				3AFC8E3E2370AF93006C525E /* Info.plist */,

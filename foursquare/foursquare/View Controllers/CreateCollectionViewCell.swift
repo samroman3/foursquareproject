@@ -10,5 +10,12 @@ import UIKit
 
 class CreateCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var collectionImage: UIImageView!
+    
+    @IBOutlet weak var collectionName: UILabel!
+    
+    @IBAction func addToCollectionButtonPressed(_ sender: UIButton) {
+    }
+    
     
 }

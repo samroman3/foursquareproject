@@ -62,5 +62,11 @@ extension BookmarksViewController: UICollectionViewDelegate, UICollectionViewDel
         return CGSize(width: 194, height: 228)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let venue = bookmarks[indexPath.row].venues
+        let listVC = storyboard?.instantiateViewController(identifier: "listVC") as! ListViewController
+        listVC.items = venue ?? [Venue]()
+        present(listVC,animated: true)
+    }
     
 }
