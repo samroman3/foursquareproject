@@ -21,6 +21,32 @@ class BookmarksViewController: UIViewController {
     @IBOutlet weak var bookmarkCV: UICollectionView!
     
     
+    @IBAction func addNewBookMark(_ sender: UIButton) {
+        let alertvc = UIAlertController(title: "Add New Collection", message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .destructive) { (action) in
+            guard alertvc.textFields![0].text != "" else {return}
+            do {
+                let new = Bookmark(image: nil , name: alertvc.textFields?[0].text ?? "", venues: [Venue]())
+                self.bookmarks.append(new)
+                let updated = self.bookmarks
+                try BookmarkPersistenceHelper.manager.saveBookmark(newArray: updated)
+                self.loadBookmarks()
+                self.bookmarkCV.reloadData()
+                
+            } catch {
+                return
+            }
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertvc.addTextField { (return) in
+            
+        }
+        alertvc.addAction(ok)
+        alertvc.addAction(cancel)
+        present(alertvc,animated: true)
+    }
+    
+    
     
     private func loadBookmarks(){
         do {

@@ -14,6 +14,8 @@ class CreateViewController: UIViewController {
     var bookmarks = [Bookmark]()
     
     var selectedVenue: Venue?
+    
+    
 
     @IBOutlet weak var createTextField: UITextField!
     
@@ -24,7 +26,7 @@ class CreateViewController: UIViewController {
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-    
+        navigationController?.popViewController(animated: true )
         
         
     }

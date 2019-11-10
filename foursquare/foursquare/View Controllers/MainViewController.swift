@@ -133,30 +133,30 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let currentVenue = venues[indexPath.row]
         cell.venueLabel.text = currentVenue.name
         cell.layer.cornerRadius = 10
-//            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
-//                switch result {
-//                case .success(let items):
-//                    if items.isEmpty {
-//                    cell.cellImage.image = UIImage(named: "yellow_placeholder")
-//                    } else {
-//                    let url = items[0].returnPictureURL()
-//                        print(url!)
-//                        ImageHelper.shared.fetchImage(urlString: url!) { (result) in
-//                                     switch result {
-//                                     case .failure(let error):
-//                                         print(error)
-//                                         print(url!)
-//                                     case .success(let pic):
-//                                         cell.cellImage.image = pic
-//                                     }
-//                                 }
-//                    }
-//                case .failure(let error):
-//                    print(error)
-//                    print("its me")
-//                }
-//
-//        }
+            FSAPIClient.shared.getPictureURL(venueID: currentVenue.id ) { (result) in
+                switch result {
+                case .success(let items):
+                    if items.isEmpty {
+                    cell.cellImage.image = UIImage(named: "yellow_placeholder")
+                    } else {
+                    let url = items[0].returnPictureURL()
+                        print(url!)
+                        ImageHelper.shared.fetchImage(urlString: url!) { (result) in
+                                     switch result {
+                                     case .failure(let error):
+                                         print(error)
+                                         print(url!)
+                                     case .success(let pic):
+                                         cell.cellImage.image = pic
+                                     }
+                                 }
+                    }
+                case .failure(let error):
+                    print(error)
+                    print("its me")
+                }
+
+        }
         return cell
     }
     
